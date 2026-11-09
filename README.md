@@ -3,7 +3,7 @@
 <h1 align="center">Oi, eu sou a Júlia Samara 💜</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=18&amp;duration=3200&amp;pause=1600&amp;color=9B68A6&amp;center=true&amp;vCenter=true&amp;width=500&amp;lines=Desenvolvedora+Full+Stack;Estudante+de+Intelig%C3%AAncia+Artificial;Estudante+de+Desenvolvimento+de+Sistemas" alt="Desenvolvedora Full Stack · Estudante de Inteligência Artificial · Estudante de Desenvolvimento de Sistemas" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=18&amp;duration=3200&amp;pause=1600&amp;color=9B68A6&amp;center=true&amp;vCenter=true&amp;width=500&amp;lines=Desenvolvedora+Full+Stack;Graduanda+em+Intelig%C3%AAncia+Artificial;Cursando+T%C3%A9cnico+em+Desenvolvimento+de+Sistemas" alt="Desenvolvedora Full Stack · Graduanda em Inteligência Artificial · Cursando Técnico em Desenvolvimento de Sistemas" />
 </p>
 
 <p align="center">
