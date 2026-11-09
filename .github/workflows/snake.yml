@@ -1,0 +1,46 @@
+name: Cobrinha de contribuições
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/snake.yml']
+  workflow_dispatch:
+  schedule:
+    - cron: '27 6 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cobrinha-do-perfil
+  cancel-in-progress: false
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Gerar as animações
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?color_snake=#864E97&color_dots=#F5EDF6,#EBD2EB,#DCACDC,#C083C6,#9959A4
+            dist/snake-dark.svg?palette=github-dark&color_snake=#F3BCE2&color_dots=#252334,#503851,#78567E,#AD7CAE,#DBACDA
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publicar na branch output
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: ./dist
+          keep_files: true
+          enable_jekyll: true
+          full_commit_message: 'docs: atualiza a cobrinha do perfil'
